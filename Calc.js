@@ -22,3 +22,18 @@ function calculate() {
     }
 }
 
+window.onload = function () {
+    txt1.focus();
+};
+
+txt1.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        calculate();
+    }
+});
+
+txt1.addEventListener("keypress", function (e) {
+    if (/[a-zA-Z]/.test(e.key)) {
+        e.preventDefault();
+    }
+});
